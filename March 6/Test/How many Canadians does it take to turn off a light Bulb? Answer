@@ -1,0 +1,7 @@
+n=int(input())
+l=[int(x) for x in input().split()]
+st=0
+for i in range(n):
+    if (l[i]==0 and st%2==0) or (l[i]==1 and st%2==1):
+        st=st+1
+print(st)
