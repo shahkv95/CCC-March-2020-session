@@ -1,0 +1,22 @@
+n=int(input())
+l=[int(x) for x in input().split()]
+c=0
+s1=0
+s2=0
+for i in range(n):
+    t=0
+    if l[-1]>l[0]:
+        t=l[-1]
+        l.pop(len(l)-1)
+    else:
+        t=l[0]
+        l.pop(0)
+    if c%2==0:
+        s1=s1+t
+    else:
+        s2=s2+t
+    c=c+1    
+if s1>=s2:
+    print('Pucca')
+else:
+    print('Garu')
