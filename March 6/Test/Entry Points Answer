@@ -1,0 +1,14 @@
+n=int(input())
+
+check = [int(x) for x in input().split()] 
+
+cnt = check.count(-1)
+p = -1
+
+if cnt==n:
+    print(0)
+else:    
+    if p in check:
+        check.remove(p)  
+    res = max(set(check), key = check.count) 
+    print(res)
