@@ -1,0 +1,15 @@
+s = [char for char in input()]
+letters = ['h', 'e', 'l','l', 'o']
+
+flag = 1
+for l in letters:
+    try:
+        idx = s.index(l)
+        s = s[idx+1:]
+    except ValueError:
+        flag = 0
+        
+if flag == 0:
+    print("NO")
+else:
+    print("YES")
