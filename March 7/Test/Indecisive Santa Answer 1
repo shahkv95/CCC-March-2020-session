@@ -1,0 +1,38 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int distance(int x1, int y1, int x2, int y2) {
+    return abs(y2-y1) + abs(x2-x1);
+}
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+    int n, m;
+    cin >> n >> m;
+    int mat[n][m];
+    
+    int x1, y1, x2, y2;
+    cin >> x1 >> y1 >> x2 >> y2;
+    
+    x1--;
+    x2--;
+    y1--;
+    y2--;
+    
+    int count = 0;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            int d1 = distance(i, j, x1, y1);
+            int d2 = distance(i, j, x2, y2);
+            
+            if (d1 == d2) count++;
+        }
+    }
+    
+    cout << count;
+    return 0;
+}
