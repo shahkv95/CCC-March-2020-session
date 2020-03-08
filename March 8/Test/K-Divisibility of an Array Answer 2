@@ -1,0 +1,39 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+long int countKdivPairs(long int A[], long int n,long int K) 
+{ 
+  
+   long int freq[K] = { 0 }; 
+  
+   
+    for (long int i = 0; i < n; i++) 
+        ++freq[A[i] % K]; 
+  
+   
+    long int sum = freq[0] * (freq[0] - 1) / 2; 
+ 
+    for (long int i = 1; i <= K / 2 && i != (K - i); i++) 
+        sum += freq[i] * freq[K - i]; 
+
+    if (K % 2 == 0) 
+        sum += (freq[K / 2] * (freq[K / 2] - 1) / 2); 
+    return sum; 
+} 
+
+int main() 
+{ 
+  
+    long int n,k,i=0,arr[1000000];
+    cin>>n>>k;
+    for(i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    cout << countKdivPairs(arr, n, k); 
+  
+    return 0; 
+}
