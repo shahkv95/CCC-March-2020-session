@@ -1,0 +1,27 @@
+def minP(a, d, K):
+    a.sort()
+    d.sort()
+    preq, maxP, i,  j = 0, 0, 0, 0
+    while i < K and j < K:
+        if a[i]<= d[j]:
+            preq += 1
+            i += 1
+            if preq > maxP:
+                maxP = preq
+        else:
+            preq -= 1
+            j += 1
+    return maxP
+
+N, K = list(map(int, input('').strip().split(' ')))
+a = []
+d = []
+for i in range(N):
+    x = list(map(int, input('').strip().split(' ')))
+    a.append(x[0])
+    d.append(x[1])
+
+if minP(a, d, N) > K:
+    print('no')
+else:
+    print('yes')
