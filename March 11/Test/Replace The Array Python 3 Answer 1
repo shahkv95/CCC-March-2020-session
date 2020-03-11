@@ -1,0 +1,11 @@
+n=int(input())
+l=[int(x) for x in input().split()]
+l.append(0)
+mx=0
+r=[]
+for i in range(n-1,-1,-1):
+    if l[i+1]>mx:
+        mx=l[i+1]
+    r.append(mx)
+r=r[::-1]
+print(*r)
