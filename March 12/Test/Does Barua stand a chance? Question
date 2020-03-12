@@ -1,0 +1,36 @@
+CCT B2 - Does Barua stand a chance?
+Problem
+Submissions
+Leaderboard
+You are stuck in a 2D maze. The maze is represented by a 2D array of integer a[n][m] where n is the number of rows and m is the number of columns and a[i][j] denotes the depth of the cell at the intersection of ith row and jth column. You can only slide down, i.e. you can only go from a cell to an adjacent cell with depth less than or equal to the current cell. Also you can only travel to cells that share a side with the current cell you are standing on.
+
+You are given the co-ordinates of the cell that you start on (Xs, Ys) and the co-ordinates of the cell you are supposed to end on (Xe, Ye) (These are the co-ordinates that Barua stands on).
+
+Barua is waiting for you on the cell with the end co-ordinates. Do you think you have a chance to meet him?
+
+Input Format:
+First line consists of two numbers n and m, the number of rows and columns in the maze.
+Second line consists of four integers Xs, Ys, Xe, Ye, the start and end co-ordinates.
+Next n lines contains m integers each, the jth integer on the ith line denoting the depth of the cell a[i][j].
+NOTE : You begin at (Xs,Ys) and Barua stands at (Xe,Ye).
+
+Output Format:
+Print "Hie Barua" if it is possible for you to meet him and print "No Chance" otherwise.
+
+Input Constraints :
+
+1 <= n,m <= 1000
+1 <= Xs, Xe <= n
+1 <= Ys, Ye <= m
+-10^5 <= a[i][j] <= 10^5
+
+Sample Input 0
+
+2 2
+1 1 2 2
+5 4
+7 1
+
+Sample Output 0
+
+Hie Barua
