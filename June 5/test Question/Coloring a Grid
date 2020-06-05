@@ -1,0 +1,77 @@
+4. Coloring a Grid
+An automated painting system needs a program that can paint an n x 3 grid in red, green, and blue such that no row or column contains cells that are all the same color. Determine the number of valid patterns that can be painted given n rows. Since the number of patterns can be large, return the value modulo (109+7).
+
+ 
+
+Example
+
+n = 4
+
+Some examples of how the colors can be arranged for 4 x 3 grid are shown below. The total number of valid patterns is 296490 for a grid with 4 rows. Samples with 2 and 3 rows are given below.
+
+ 
+
+
+
+ 
+
+Function Description
+
+ 
+
+Complete the countPatterns function in the editor below.
+
+ 
+
+countPatterns has only one parameter:
+
+    int n: the number of columns of the n x 3 grid.
+
+Return
+
+    int: the number of ways in which the gid can be colored, calculated as a modulo of (109+7)
+
+ 
+
+Constraints
+
+2 ≤ n ≤ 20000
+ 
+
+Input Format For Custom Testing
+The only line of input contains an integer, n, the number of rows of the n x 3 grid.
+
+Sample Case 0
+Sample Input For Custom Testing
+
+STDIN     Function 
+-----     --------
+2     →   number of rows n = 2
+Sample Output
+
+174
+Explanation
+
+ 
+
+Examples of valid patterns are shown below, as well as some invalid arrangements for comparison. There are 174 valid patterns.
+
+ 
+
+
+
+Sample Case 1
+Sample Input For Custom Testing
+
+STDIN     Function 
+-----     -------- 
+3     →   number of rows n = 3
+Sample Output
+
+9750
+Explanation
+
+n = 3
+
+Some valid ways to fill the grid:
+
