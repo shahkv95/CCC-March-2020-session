@@ -1,0 +1,55 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+#
+# Complete the 'efficientJanitor' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts FLOAT_ARRAY weight as parameter.
+#
+
+def efficientJanitor(weight):
+    # Write your code here
+    n = len(weight)
+    weight.sort()
+    head = 0
+    diff = 3.00 - weight[head]
+
+    count = 0
+
+    for i in reversed(range(n)):
+        if weight[i] > diff:
+            count += 1
+            
+        elif weight[i] <= diff:
+            if weight[i] + weight[head] <= 3.0:
+                head = head + 1
+                diff = 3.00 - weight[head]
+            count += 1
+        if head >= i:
+            break
+
+    return count
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    weight_count = int(input().strip())
+
+    weight = []
+
+    for _ in range(weight_count):
+        weight_item = float(input().strip())
+        weight.append(weight_item)
+
+    result = efficientJanitor(weight)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
