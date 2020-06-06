@@ -1,0 +1,32 @@
+The adorable couple Monkey and Panda are shifting to a new city, but they decide its too soon for them to move in together, but they still want to live closeby, so they decide to take two different apartments such that the distance between them is minimum.
+
+They are not programmers and hence cannot figure out the minimum distance that they will be staying at. They ask for your help.
+
+The city can be denoted as a 2D plane and each apartment can be denoted as a point (x, y). Distance between two apartments is the euclidean distance between their locations.
+
+Help them find the minimum distance that they can stay at.
+
+Input
+
+First line contains n the number of apartments.
+Next n lines each contain the location (x, y) of an apartment.
+
+Output
+
+Print the minimum distance between any two apartments
+
+Notes
+
+1 ≤ n ≤ 100,000
+0 ≤ x, y ≤ 1e9
+
+Sample Input 0
+
+4
+0 0
+1 0
+1 1
+0 1
+Sample Output 0
+
+1.000000000000
