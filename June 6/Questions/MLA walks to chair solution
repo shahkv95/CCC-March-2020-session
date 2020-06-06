@@ -1,0 +1,62 @@
+#include "bits/stdc++.h"
+using namespace std;
+ 
+typedef long long ll;
+typedef vector<int> vi;
+typedef pair<int,int> ii;
+ 
+#define fill(a,x) memset(a,x,sizeof(a)) 
+#define pb push_back
+#define sz(x) (int)x.size()
+#define all(x) x.begin(),x.end() 
+#define F first
+#define S second
+#define FOR(i,a,b) for(int i = a; i<=b; ++i)
+#define NFOR(i,a,b) for(int i = a; i>=b; --i)
+#define fast ios_base::sync_with_stdio(false),cin.tie(0),cout.tie(0)
+const ll INF = 1e18;
+const int mod = 1e9+7;
+const int N = 1e5+10; 
+inline int add(int x,int y){
+  x += y;
+  if(x >= mod) x -= mod;
+  return x;
+}
+inline int mul(int x,int y){
+  x = (1LL * x * y) % mod;
+  return x;
+}
+ 
+ 
+int main(){
+  fast;
+  int t;
+  cin >> t;
+  while(t--){
+    int n;
+    string s;
+    cin >> n >> s;
+    int mx = 0,zero = 0;
+    int last = -1;
+    FOR(i,0,n-1){
+      if(s[i] == '1'){
+        if(last != -1){
+          mx = max(mx,i - last-1);
+          //cout << i - last-1 << "\n";
+        }
+        last = i;
+      }
+      else{
+        zero++;
+      }
+    }
+    FOR(i,0,n-1){
+      if(s[i] == '1'){
+        mx = max(mx,i - last + n - 1);
+        break;
+      }
+    }
+    cout << zero - mx << "\n";
+  }
+  return 0;
+}
