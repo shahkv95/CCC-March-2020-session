@@ -1,0 +1,85 @@
+import java.util.Scanner;
+
+abstract class Car {
+    protected Boolean isSedan;
+    protected String seats;
+
+    public Car(Boolean isSedan, String seats) {
+        this.isSedan = isSedan;
+        this.seats = seats;
+    }
+
+    public Boolean getIsSedan() {
+        return this.isSedan;
+    }
+
+    public String getSeats() {
+        return this.seats;
+    }
+
+    public abstract String getMileage();
+}
+
+class WagonR extends Car {
+    private String mileage;
+
+    public WagonR(Integer mileage) {
+        super(false, "4");
+        this.mileage = mileage + " kmpl";
+        if(getIsSedan()==false)
+        {
+           System.out.println("A WagonR is not Sedan, "+ "is " + getSeats() + "-seater,"+" and has a mileage of around " + getMileage()+".");
+        }
+        if(getIsSedan()==true)
+        {
+           System.out.println("A WagonR is Sedan, "+ "is " + getSeats() + "-seater,"+" and has a mileage of around " + getMileage()+".");
+        }
+      
+    }
+
+    public String getMileage() {
+        return this.mileage;
+    }
+}
+
+class HondaCity extends Car {
+    private String mileage;
+
+    public HondaCity(Integer mileage) {
+        super(true, "4");
+        this.mileage = mileage + " kmpl";
+         if(getIsSedan()==false)
+        {
+           System.out.println("A HondaCity is not Sedan, "+ "is " + getSeats() + "-seater,"+" and has a mileage of around " + getMileage()+".");
+        }
+        if(getIsSedan()==true)
+        {
+           System.out.println("A HondaCity is Sedan, "+ "is " + getSeats() + "-seater,"+" and has a mileage of around " + getMileage()+".");
+        }
+    }
+
+    public String getMileage() {
+        return this.mileage;
+    }
+}
+
+class InnovaCrysta extends Car {
+    private String mileage;
+
+    public InnovaCrysta(Integer mileage) {
+        super(false, "6");
+        this.mileage = mileage + " kmpl";
+        if(getIsSedan()==false)
+        {
+           System.out.println("A InnovaCrysta is not Sedan, "+ "is " + getSeats() + "-seater,"+" and has a mileage of around " + getMileage()+".");
+        }
+        if(getIsSedan()==true)
+        {
+           System.out.println("A InnovaCrysta is Sedan, "+ "is " + getSeats() + "-seater,"+" and has a mileage of around " + getMileage()+".");
+        }
+    }
+
+    public String getMileage() {
+        return this.mileage;
+    }
+}
