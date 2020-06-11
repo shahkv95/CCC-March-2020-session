@@ -1,0 +1,11 @@
+n=int(input())
+ar=input().split()
+ar=list(map(int,ar))
+a=set(ar)
+d={ar.count(i):[] for i in a}
+for i in a:
+    d[ar.count(i)].append(i)
+
+ma=max(d.keys())
+mi=min(d.keys())
+print(abs(max(d[ma])-max(d[mi])))
