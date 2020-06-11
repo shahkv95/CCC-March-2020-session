@@ -1,0 +1,31 @@
+4. L1 - Mathematical Skills01
+Given an array of n numbers, print the absolute difference between the integer with highest frequency and the element with lowest non-zero frequency.
+
+ 
+
+Input Format :
+
+First line contains a number n.
+Next line contains n integers, the array.
+
+1 <= n <= 10^3
+0 <= a[i] <= 100
+
+ 
+
+Output Format : 
+
+Print the absolute difference between the integer with highest frequency and the element with lowest non-zero frequency.
+
+If more than one answers are possible, print the biggest possible answer.
+
+ 
+
+Sample Input : 
+5
+1 2 1 4 5
+
+ 
+
+Sample Output : 
+4
