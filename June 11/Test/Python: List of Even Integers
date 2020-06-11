@@ -1,0 +1,49 @@
+1. Python: List of Even Integers
+In this challenge, you are required to implement a function that:
+
+is named even.
+
+takes 2 integer arguments, start, and n.
+
+returns a list of n smallest even integers greater than or equal to start, in ascending order.
+
+ 
+
+Implementation of the function will be tested by a provided code stub on several input files. Each input file contains parameters for the function call. The function will be called with those parameters, and the result of its execution will be printed to the standard output by the provided code.
+
+ 
+
+Constraints
+
+1 ≤ start, n ≤ 100
+
+ 
+
+Input Format Format for Custom Testing
+In the first and only line, there are two space-separated integers, start, and n.
+
+Sample Case 0
+Sample Input
+
+STDIN      Function
+-----      --------
+2 4     →  start = 2, n = 4
+Sample Output
+
+2 4 6 8
+Explanation
+
+The function must return a list of the 4 smallest even integers that are greater than or equal to 2, sorted into ascending order: 2, 4, 6, and 8.
+
+Sample Case 1
+Sample Input
+
+STDIN      Function
+-----      --------
+5 7     →  start = 5, n = 7
+Sample Output
+
+6 8 10 12 14 16 18
+Explanation
+
+The function must return a list of the 7 smallest even integers that are greater than or equal to 5, sorted in ascending order: 6, 8, 10, 12, 14, 16, 18.
