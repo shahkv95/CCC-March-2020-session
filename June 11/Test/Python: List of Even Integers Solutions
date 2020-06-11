@@ -1,0 +1,27 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+def even(start, n):
+    # write your code here
+    lst = []
+    if start % 2 != 0:
+        start += 1
+    for i in range(n):
+        lst.append(start + i*2)
+
+    return lst
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    start, n = map(int, input().split())
+    res = even(start, n)
+    assert type(res) == list
+    fptr.write(" ".join(map(str, res)) + '\n')
+    fptr.close()
