@@ -1,0 +1,67 @@
+2. Car Inheritance
+Build on an abstract class and initialize an instance of each class with a variable. The program will then test the implementation by retrieving the stored data.
+
+ 
+
+The locked code in the editor does the following:
+
+Declares an abstract class named Car with the implementations for getIsSedan() and getSeats() methods, as well as an abstract method named getMileage().
+Creates WagonR, HondaCity, or InnovaCrysta object based on input (0 for WagonR, 1 for HondaCity and 2 for InnovaCrysta).
+Calls the getIsSedan(), getSeats(), and getMileage() methods on the object.
+ 
+
+A UML diagram of Car, WagonR, HondaCity, and InnovaCrysta classes. Recall that - denotes private, + denotes public, and # denotes protected.
+
+ 
+
+The details for each car are provided below:
+
+ 
+
+WagonR is not a sedan and has 4 seats.
+HondaCity is a sedan and has 4 seats.
+InnovaCrysta is not a sedan and has 6 seats.
+ 
+
+Function Description 
+
+Complete the code in the editor below to implement the following:
+
+ 
+
+Three classes named, WagonR, HondaCity, and InnovaCrysta that inherit from the Car class.
+One integer argument is provided to the constructor which is the mileage of the car.
+Each class must implement the getMileage() method which returns a string in the form of '<mileage> kmpl' where <mileage> is the value provided to constructor.
+ 
+
+Constraints
+
+0 ≤ type of car ≤ 2
+5 ≤ mileage ≤ 30
+ 
+
+Input Format For Custom Testing
+The first line contains an integer that describes the type of car to instantiate.
+
+The second line contains an integer, the mileage of the car.
+
+Sample Case 0
+Sample Input For Custom Testing
+
+STDIN    Function
+-----    --------
+0     →  type of car to instantiate = 0 (WagonR)
+22    →  mileage = 22
+Sample Output
+
+A WagonR is not Sedan, is 4-seater, and has a mileage of around 22 kmpl.
+Sample Case 1
+Sample Input For Custom Testing
+
+STDIN    Function
+-----    --------
+1     →  type of car to instantiate = 1 (HondaCity)
+12    →  mileage = 12
+Sample Output
+
+A HondaCity is Sedan, is 4-seater, and has a mileage of around 12 kmpl.
